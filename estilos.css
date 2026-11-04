@@ -155,12 +155,9 @@ button { font: inherit; color: inherit; }
 @keyframes pulsa { 40% { transform: scale(.96); box-shadow: 0 0 0 6px rgba(18, 181, 166, .3); } }
 
 /* Demo 1: pagos */
-.pagos { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-.pago { position: relative; border: 1px solid var(--linea); border-radius: 12px; padding: 10px; font-size: .82rem; font-weight: 700; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-.pago small { width: 100%; font-size: .62rem; font-family: var(--mono); color: #B86E0B; font-weight: 600; letter-spacing: .02em; }
-.pago__icono { width: 22px; height: 16px; border-radius: 4px; background: var(--tinta-2); }
-.pago__icono--bizum { background: #3BC4C9; }
-.pago__icono--paypal { background: #2A5BD7; }
+.pagos { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; }
+.pago { position: relative; border: 1px solid var(--linea); border-radius: 12px; padding: 10px; font-size: .82rem; font-weight: 700; display: flex; align-items: center; gap: 8px; min-width: 0; white-space: nowrap; }
+.pago__icono { flex: none; width: 22px; height: 16px; border-radius: 4px; background: var(--tinta-2); }
 .pago__icono--banco { background: var(--gris-claro); }
 .demo[data-paso="2"] .pago--elegido { border-color: var(--acento); background: #F1FBF9; box-shadow: inset 0 0 0 1px var(--acento); }
 .tarjeta-pago { display: flex; justify-content: space-between; font-family: var(--mono); font-size: .8rem; background: #F4F2EC; border-radius: 10px; padding: 10px 12px; margin: 12px 0; }
