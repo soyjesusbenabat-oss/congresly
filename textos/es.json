@@ -219,8 +219,8 @@
     "i4_d": "Inscripción, facturas, comunicaciones, acreditación, encuestas y certificados en un solo sitio.",
     "i5_t": "En cualquier dispositivo",
     "i5_d": "Funciona en el navegador del ordenador, la tableta y el móvil. No hay nada que instalar.",
-    "i6_t": "Conector con Claude",
-    "i6_d": "Su equipo puede consultar y operar el congreso desde Claude, con los mismos permisos que en el panel."
+    "i6_t": "Conectado con IA",
+    "i6_d": "Su equipo puede consultar y operar el congreso desde su asistente de IA, con los mismos permisos que en el panel."
   },
   "para": {
     "rotulo": "Para quién",
