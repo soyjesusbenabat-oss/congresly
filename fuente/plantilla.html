@@ -1,0 +1,665 @@
+<!doctype html>
+<html lang="{{meta.lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{meta.titulo}}</title>
+<meta name="description" content="{{meta.descripcion}}">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="[[URL]]">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Congresly">
+<meta property="og:locale" content="{{meta.locale}}">
+<meta property="og:title" content="{{meta.og_titulo}}">
+<meta property="og:description" content="{{meta.descripcion}}">
+<meta property="og:url" content="[[URL]]">
+<meta property="og:image" content="[[URL]]og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{meta.og_alt}}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0E1A2B">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilos.css?v=[[VERSION]]">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Congresly","applicationCategory":"BusinessApplication","operatingSystem":"Web","description":"{{meta.descripcion}}","url":"[[URL]]"}
+</script>
+</head>
+<body>
+<a class="saltar" href="#contenido">Ir al contenido</a>
+
+<!-- ============ CABECERA ============ -->
+<header class="cabecera" id="cabecera">
+  <div class="envoltura cabecera__fila">
+    <a class="marca" href="#" aria-label="{{nav.inicio}}">
+      <svg class="marca__icono" viewBox="0 0 32 32" aria-hidden="true"><use href="#logo"/></svg>
+      <span class="marca__nombre">congresly</span>
+    </a>
+    <nav class="menu" id="menu" aria-label="Principal">
+      <a href="#como">{{nav.como}}</a>
+      <a href="#congresista">{{nav.congresista}}</a>
+      <a href="#modulos">{{nav.modulos}}</a>
+      <a href="#para-quien">{{nav.para_quien}}</a>
+      <a href="#preguntas">{{nav.preguntas}}</a>
+      <a class="boton boton--acento menu__cta" href="#demo">{{nav.cta}}</a>
+    </nav>
+    <a class="boton boton--acento cabecera__cta" href="#demo">{{nav.cta}}</a>
+    <button class="hamburguesa" id="hamburguesa" aria-controls="menu" aria-expanded="false" data-abrir="{{nav.menu}}" data-cerrar="{{nav.cerrar}}" aria-label="{{nav.menu}}"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="contenido">
+
+<!-- ============ PORTADA ============ -->
+<section class="portada">
+  <div class="envoltura portada__rejilla">
+    <div class="portada__texto">
+      <p class="rotulo">{{hero.rotulo}}</p>
+      <h1>{{hero.titulo}}</h1>
+      <p class="entradilla">{{hero.entrada}}</p>
+      <div class="portada__botones">
+        <a class="boton boton--acento boton--grande" href="#demo">{{hero.cta}}</a>
+        <a class="boton boton--linea boton--grande" href="#como">{{hero.secundario}}</a>
+      </div>
+      <p class="portada__nota">{{hero.nota}}</p>
+    </div>
+    <div class="portada__visual">
+      <figure class="navegador navegador--portada">
+        <div class="navegador__barra" aria-hidden="true"><i></i><i></i><i></i><span>congresly · panel</span></div>
+        <img src="img/panel-resumen.webp" width="1400" height="920" alt="{{hero.captura_alt}}" fetchpriority="high">
+      </figure>
+      <div class="flotante flotante--1" aria-hidden="true"><b class="punto punto--ok"></b><div><strong>{{hero.chip_factura}}</strong><span>{{hero.chip_factura_det}}</span></div></div>
+      <div class="flotante flotante--2" aria-hidden="true"><b class="punto punto--qr"></b><div><strong>{{hero.chip_checkin}}</strong><span>{{hero.chip_checkin_det}}</span></div></div>
+      <div class="flotante flotante--3" aria-hidden="true"><b class="punto punto--cert"></b><div><strong>{{hero.chip_cert}}</strong><span>{{hero.chip_cert_det}}</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRUEBA REAL ============ -->
+<section class="prueba">
+  <div class="envoltura prueba__fila">
+    <p class="rotulo rotulo--claro">{{prueba.rotulo}}</p>
+    <p class="prueba__texto">{{prueba.texto}}</p>
+    <div class="prueba__nombres" aria-hidden="true"><span>{{prueba.c1}}</span><span>{{prueba.c2}}</span></div>
+  </div>
+</section>
+
+<!-- ============ CÓMO FUNCIONA (mini-demostraciones) ============ -->
+<section class="seccion" id="como">
+  <div class="envoltura">
+    <header class="seccion__cabeza">
+      <p class="rotulo">{{como.rotulo}}</p>
+      <h2>{{como.titulo}}</h2>
+      <p class="entradilla">{{como.entrada}}</p>
+    </header>
+
+
+    <div class="demos">
+    <!-- Demo 1: inscripción → pago → factura -->
+    <div class="demo" id="d1" data-pasos="3" data-tiempos="3800,4200,4400">
+      <div class="demo__texto">
+        <span class="demo__num">01</span><h3>{{como.d1_titulo}}</h3>
+        <p>{{como.d1_texto}}</p>
+        <ol class="demo__pasos"><li>{{como.d1_p1}}</li><li>{{como.d1_p2}}</li><li>{{como.d1_p3}}</li></ol>
+        <div class="demo__mandos"><button class="mando" data-accion="anterior" aria-label="{{como.anterior}}">‹</button><button class="mando mando--pausa" data-accion="pausa" data-pausa="{{como.pausa}}" data-seguir="{{como.seguir}}">{{como.pausa}}</button><button class="mando" data-accion="siguiente" aria-label="{{como.siguiente}}">›</button></div>
+        <p class="demo__aviso">{{como.aviso_ilustrativo}}</p>
+      </div>
+      <div class="escenario" aria-hidden="true">
+        <div class="ventana">
+          <div class="ventana__cabeza">{{demo1.cabecera}}</div>
+          <div class="capa capa--p1">
+            <label class="campo"><span>{{demo1.nombre}}</span><b class="escribe" data-texto="{{demo1.nombre_val}}"></b></label>
+            <label class="campo"><span>{{demo1.correo}}</span><b class="escribe" data-texto="{{demo1.correo_val}}" data-retraso="900"></b></label>
+            <p class="campo__titulo">{{demo1.tarifa}}</p>
+            <div class="opciones">
+              <div class="opcion opcion--elegida"><i></i>{{demo1.t1}}<em>{{demo1.t1_precio}}</em></div>
+              <div class="opcion"><i></i>{{demo1.t2}}<em>{{demo1.t2_precio}}</em></div>
+            </div>
+            <div class="boton boton--tinta boton--bloque pulsa">{{demo1.continuar}}</div>
+          </div>
+          <div class="capa capa--p2">
+            <p class="campo__titulo">{{demo1.pago}}</p>
+            <div class="pagos">
+              <div class="pago pago--elegido"><span class="pago__icono pago__icono--tarjeta"></span>{{demo1.tarjeta}}</div>
+              <div class="pago"><span class="pago__icono pago__icono--bizum"></span>{{demo1.bizum}}<small>{{demo1.proximamente}}</small></div>
+              <div class="pago"><span class="pago__icono pago__icono--paypal"></span>{{demo1.paypal}}<small>{{demo1.proximamente}}</small></div>
+              <div class="pago"><span class="pago__icono pago__icono--banco"></span>{{demo1.transferencia}}</div>
+            </div>
+            <div class="tarjeta-pago"><span>•••• •••• •••• 4242</span><span>12/28</span></div>
+            <div class="total"><span>{{demo1.total}}</span><strong>350,00 €</strong></div>
+            <div class="boton boton--acento boton--bloque pago-boton"><span class="pago-boton__a">{{demo1.pagar}}</span><span class="pago-boton__b"><i class="girar"></i>{{demo1.procesando}}</span><span class="pago-boton__c">✓ {{demo1.aceptado}}</span></div>
+          </div>
+          <div class="capa capa--p3">
+            <div class="factura">
+              <div class="factura__cabeza"><div><small>{{demo1.factura}}</small><strong>{{demo1.factura_num}}</strong></div><span class="sello">{{demo1.factura_emitida}}</span></div>
+              <div class="factura__linea"><span>{{demo1.factura_linea}}</span><span>{{demo1.factura_base_val}}</span></div>
+              <div class="factura__linea factura__linea--suave"><span>{{demo1.factura_base}}</span><span>{{demo1.factura_base_val}}</span></div>
+              <div class="factura__linea factura__linea--suave"><span>{{demo1.factura_iva}}</span><span>{{demo1.factura_iva_val}}</span></div>
+              <div class="factura__linea factura__linea--total"><span>{{demo1.factura_total}}</span><span>{{demo1.factura_total_val}}</span></div>
+            </div>
+            <p class="aviso-ok aparece" style="--r:.5s">✉ {{demo1.enviada}}</p>
+            <p class="aviso-ok aparece" style="--r:1.1s">◉ {{demo1.panel}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Demo 2: comunicaciones -->
+    <div class="demo demo--inversa" id="d2" data-pasos="4" data-tiempos="3800,3200,3800,4200">
+      <div class="demo__texto">
+        <span class="demo__num">02</span><h3>{{como.d2_titulo}}</h3>
+        <p>{{como.d2_texto}}</p>
+        <ol class="demo__pasos"><li>{{como.d2_p1}}</li><li>{{como.d2_p2}}</li><li>{{como.d2_p3}}</li><li>{{como.d2_p4}}</li></ol>
+        <div class="demo__mandos"><button class="mando" data-accion="anterior" aria-label="{{como.anterior}}">‹</button><button class="mando mando--pausa" data-accion="pausa" data-pausa="{{como.pausa}}" data-seguir="{{como.seguir}}">{{como.pausa}}</button><button class="mando" data-accion="siguiente" aria-label="{{como.siguiente}}">›</button></div>
+        <p class="demo__aviso">{{como.aviso_ilustrativo}}</p>
+      </div>
+      <div class="escenario" aria-hidden="true">
+        <div class="ventana">
+          <div class="ventana__cabeza">{{demo2.cabecera}}</div>
+          <div class="capa capa--p1">
+            <label class="campo campo--alto"><span>{{demo2.titulo_campo}}</span><b class="escribe" data-texto="{{demo2.titulo_val}}"></b></label>
+            <label class="campo"><span>{{demo2.linea}}</span><b>{{demo2.linea_val}}</b></label>
+            <label class="campo"><span>{{demo2.modalidad}}</span><b>{{demo2.modalidad_val}}</b></label>
+            <div class="boton boton--tinta boton--bloque pulsa">{{demo2.enviar}}</div>
+          </div>
+          <div class="capa capa--p2">
+            <div class="ficha"><span class="etiqueta">{{demo2.recibida}}</span><strong>{{demo2.titulo_val}}</strong></div>
+            <p class="campo__titulo">{{demo2.asignacion}} <span class="etiqueta etiqueta--tinta">{{demo2.ciego}}</span></p>
+            <div class="revisores">
+              <div class="revisor aparece" style="--r:.4s"><i>A</i>{{demo2.rev1}}</div>
+              <div class="revisor aparece" style="--r:.9s"><i>B</i>{{demo2.rev2}}</div>
+            </div>
+            <div class="flechas"><span></span><span></span></div>
+          </div>
+          <div class="capa capa--p3">
+            <div class="ficha"><span class="etiqueta">CO-027</span><strong>{{demo2.titulo_val}}</strong></div>
+            <div class="barras">
+              <div class="barra"><span>{{demo2.criterio1}}</span><i style="--v:86%"></i><b>8,5</b></div>
+              <div class="barra"><span>{{demo2.criterio2}}</span><i style="--v:82%"></i><b>8,2</b></div>
+              <div class="barra"><span>{{demo2.criterio3}}</span><i style="--v:92%"></i><b>9,1</b></div>
+            </div>
+            <div class="total"><span>{{demo2.media}}</span><strong>{{demo2.media_val}}</strong></div>
+          </div>
+          <div class="capa capa--p4">
+            <div class="decision"><span class="decision__icono">✓</span><div><strong>{{demo2.decision}}</strong><span>{{demo2.decision_det}}</span></div></div>
+            <p class="aviso-ok aparece" style="--r:.6s">✉ {{demo2.correo}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Demo 3: acreditación QR -->
+    <div class="demo" id="d3" data-pasos="3" data-tiempos="3400,3000,4600">
+      <div class="demo__texto">
+        <span class="demo__num">03</span><h3>{{como.d3_titulo}}</h3>
+        <p>{{como.d3_texto}}</p>
+        <ol class="demo__pasos"><li>{{como.d3_p1}}</li><li>{{como.d3_p2}}</li><li>{{como.d3_p3}}</li></ol>
+        <div class="demo__mandos"><button class="mando" data-accion="anterior" aria-label="{{como.anterior}}">‹</button><button class="mando mando--pausa" data-accion="pausa" data-pausa="{{como.pausa}}" data-seguir="{{como.seguir}}">{{como.pausa}}</button><button class="mando" data-accion="siguiente" aria-label="{{como.siguiente}}">›</button></div>
+        <p class="demo__aviso">{{como.aviso_ilustrativo}}</p>
+      </div>
+      <div class="escenario escenario--qr" aria-hidden="true">
+        <div class="acreditacion">
+          <div class="acreditacion__franja">{{demo3.congreso}}</div>
+          <div class="acreditacion__cuerpo">
+            <small>{{demo3.acreditacion}}</small>
+            <strong>{{demo3.persona}}</strong>
+            <span>{{demo3.afiliacion}}</span>
+            <div class="qr"></div>
+          </div>
+          <div class="acreditacion__rol">{{demo3.rol}}</div>
+        </div>
+        <div class="movil">
+          <div class="movil__pantalla">
+            <div class="movil__cabeza">{{demo3.lector}}</div>
+            <div class="visor"><div class="visor__marco"></div><div class="visor__linea"></div><div class="qr qr--peq"></div><p>{{demo3.apuntando}}</p></div>
+            <div class="lectura-ok"><span>✓</span><strong>{{demo3.ok}}</strong><small>{{demo3.ok_det}}</small></div>
+            <div class="contador"><small>{{demo3.presentes}}</small><b class="contador__a">{{demo3.presentes_ini}}</b><b class="contador__b">{{demo3.presentes_fin}}</b></div>
+            <p class="movil__nota">{{demo3.sin_conexion}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Demo 4: asistencia → encuesta → certificado -->
+    <div class="demo demo--inversa" id="d4" data-pasos="3" data-tiempos="3800,4000,4600">
+      <div class="demo__texto">
+        <span class="demo__num">04</span><h3>{{como.d4_titulo}}</h3>
+        <p>{{como.d4_texto}}</p>
+        <ol class="demo__pasos"><li>{{como.d4_p1}}</li><li>{{como.d4_p2}}</li><li>{{como.d4_p3}}</li></ol>
+        <div class="demo__mandos"><button class="mando" data-accion="anterior" aria-label="{{como.anterior}}">‹</button><button class="mando mando--pausa" data-accion="pausa" data-pausa="{{como.pausa}}" data-seguir="{{como.seguir}}">{{como.pausa}}</button><button class="mando" data-accion="siguiente" aria-label="{{como.siguiente}}">›</button></div>
+        <p class="demo__aviso">{{como.aviso_ilustrativo}}</p>
+      </div>
+      <div class="escenario" aria-hidden="true">
+        <div class="ventana">
+          <div class="ventana__cabeza">{{demo4.asistencia}}</div>
+          <div class="capa capa--p1">
+            <div class="asistencia">
+              <div class="asistencia__barra"><i class="asistencia__pres"></i><i class="asistencia__linea"></i><span class="asistencia__umbral"></span></div>
+              <div class="leyenda"><span><i class="l-pres"></i>{{demo4.presencial}} · 11 h 20 min</span><span><i class="l-lin"></i>{{demo4.en_linea}} · 2 h 30 min</span></div>
+              <p class="campo__titulo">{{demo4.requisito}}</p>
+              <span class="etiqueta etiqueta--ok aparece" style="--r:2.2s">✓ {{demo4.cumple}}</span>
+            </div>
+          </div>
+          <div class="capa capa--p2">
+            <p class="campo__titulo">{{demo4.encuesta}} <span class="etiqueta">{{demo4.anonima}}</span></p>
+            <div class="pregunta"><span>{{demo4.pregunta1}}</span><div class="estrellas estrellas--1"><i></i><i></i><i></i><i></i><i></i></div></div>
+            <div class="pregunta"><span>{{demo4.pregunta2}}</span><div class="estrellas estrellas--2"><i></i><i></i><i></i><i></i><i></i></div></div>
+            <div class="boton boton--tinta boton--bloque pulsa pulsa--tarde">{{demo4.enviar}}</div>
+          </div>
+          <div class="capa capa--p3">
+            <div class="certificado">
+              <div class="certificado__sello">✓</div>
+              <strong>{{demo4.certificado}}</strong>
+              <span>{{demo4.certificado_det}}</span>
+              <div class="certificado__estado"><s>{{demo4.bloqueado}}</s></div>
+              <div class="boton boton--acento boton--bloque aparece" style="--r:.8s">↓ {{demo4.descargar}}</div>
+              <small class="aparece" style="--r:1.2s">{{demo4.verificable}}</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Demo 5: asistente de IA -->
+    <div class="demo" id="d5" data-pasos="3" data-tiempos="3600,4400,5200">
+      <div class="demo__texto">
+        <span class="demo__num">05</span><h3>{{como.d5_titulo}}</h3>
+        <p>{{como.d5_texto}}</p>
+        <ol class="demo__pasos"><li>{{como.d5_p1}}</li><li>{{como.d5_p2}}</li><li>{{como.d5_p3}}</li></ol>
+        <div class="demo__mandos"><button class="mando" data-accion="anterior" aria-label="{{como.anterior}}">‹</button><button class="mando mando--pausa" data-accion="pausa" data-pausa="{{como.pausa}}" data-seguir="{{como.seguir}}">{{como.pausa}}</button><button class="mando" data-accion="siguiente" aria-label="{{como.siguiente}}">›</button></div>
+        <p class="demo__aviso">{{como.aviso_ilustrativo}}</p>
+      </div>
+      <div class="escenario" aria-hidden="true">
+        <div class="ventana ventana--chat">
+          <div class="ventana__cabeza"><span class="destello">✦</span> {{demo5.cabecera}}</div>
+          <div class="chat">
+            <div class="burbuja burbuja--yo"><b class="escribe" data-texto="{{demo5.pregunta}}"></b></div>
+            <div class="burbuja burbuja--ia burbuja--r1"><span class="puntos"><i></i><i></i><i></i></span><p>{{demo5.respuesta}}</p></div>
+            <div class="burbuja burbuja--ia burbuja--r2"><p>{{demo5.propuesta}}</p>
+              <div class="accion"><span>{{demo5.accion}}</span><div><em class="accion__no">{{demo5.cancelar}}</em><em class="accion__si">{{demo5.confirmar}}</em></div></div>
+            </div>
+            <div class="burbuja burbuja--ok">✓ {{demo5.hecho}}</div>
+          </div>
+          <div class="chat__entrada"><span>{{demo5.escribiendo}}</span><small>{{demo5.nota}}</small></div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ASÍ LO VIVE EL CONGRESISTA ============ -->
+<section class="seccion seccion--persona" id="congresista">
+  <div class="envoltura persona">
+    <div class="persona__texto">
+      <p class="rotulo">{{persona.rotulo}}</p>
+      <h2>{{persona.titulo}}</h2>
+      <p class="entradilla">{{persona.entrada}}</p>
+      <ol class="persona__lista" id="persona-lista">
+        <li><button type="button" data-pantalla="1" aria-pressed="true"><strong>{{persona.f1_t}}</strong><span>{{persona.f1_d}}</span></button></li>
+        <li><button type="button" data-pantalla="2" aria-pressed="false"><strong>{{persona.f2_t}}</strong><span>{{persona.f2_d}}</span></button></li>
+        <li><button type="button" data-pantalla="3" aria-pressed="false"><strong>{{persona.f3_t}}</strong><span>{{persona.f3_d}}</span></button></li>
+        <li><button type="button" data-pantalla="4" aria-pressed="false"><strong>{{persona.f4_t}}</strong><span>{{persona.f4_d}}</span></button></li>
+      </ol>
+    </div>
+    <div class="persona__visual" aria-hidden="true">
+      <div class="telefono" id="telefono" data-pantalla="1">
+        <div class="telefono__isla"></div>
+        <div class="telefono__pantalla">
+          <div class="area-cab">
+            <span class="area-cab__logo">HS</span>
+            <div><strong>{{persona.congreso}}</strong><small>{{persona.fechas}}</small></div>
+          </div>
+          <div class="area-cuerpo">
+            <!-- 1 · Inscripción y factura -->
+            <div class="pant pant--1">
+              <p class="area-hola">{{persona.hola}}</p>
+              <div class="tarj">
+                <div class="tarj__fila"><small>{{persona.m_inscripcion}}</small><span class="chip chip--ok">{{persona.m_pagada}}</span></div>
+                <strong>{{persona.m_tarifa}}</strong>
+              </div>
+              <div class="tarj tarj--doc">
+                <span class="doc-ico">PDF</span>
+                <div><strong>{{persona.m_factura}}</strong><small>350,00 €</small></div>
+                <span class="mini-boton">↓ {{persona.m_descargar}}</span>
+              </div>
+              <p class="area-enlace">{{persona.m_institucion}} →</p>
+            </div>
+            <!-- 2 · Comunicaciones -->
+            <div class="pant pant--2">
+              <p class="area-titulo">{{persona.m_comunicaciones}}</p>
+              <div class="tarj">
+                <div class="tarj__fila"><small>CO-027</small><span class="chip chip--ok">{{persona.m_aceptada}}</span></div>
+                <strong>{{persona.m_com_titulo}}</strong>
+                <p class="tarj__nota">◷ {{persona.m_presenta}}</p>
+              </div>
+              <div class="tarj">
+                <div class="tarj__fila"><small>CO-031</small><span class="chip chip--espera">{{persona.m_evaluacion}}</span></div>
+                <strong>{{persona.m_com2_titulo}}</strong>
+              </div>
+            </div>
+            <!-- 3 · Acreditación -->
+            <div class="pant pant--3">
+              <div class="pase">
+                <div class="pase__cab">{{persona.congreso}}</div>
+                <strong>Lucía Fernández Álvarez</strong>
+                <small>Servicio de Salud · Área V</small>
+                <div class="qr pase__qr"></div>
+                <span class="pase__rol">{{persona.m_rol}}</span>
+              </div>
+              <p class="area-enlace area-enlace--centro">{{persona.m_ensenar}}</p>
+            </div>
+            <!-- 4 · Encuesta y certificados -->
+            <div class="pant pant--4">
+              <p class="area-titulo">{{persona.m_certificados}}</p>
+              <div class="tarj tarj--fila">
+                <span>{{persona.m_encuesta}}</span><span class="chip chip--ok">✓ {{persona.m_hecha}}</span>
+              </div>
+              <div class="tarj tarj--doc"><span class="doc-ico doc-ico--cert">✓</span><div><strong>{{persona.m_cert1}}</strong></div><span class="mini-boton">↓ {{persona.m_disponible}}</span></div>
+              <div class="tarj tarj--doc"><span class="doc-ico doc-ico--cert">✓</span><div><strong>{{persona.m_cert2}}</strong></div><span class="mini-boton">↓ {{persona.m_disponible}}</span></div>
+              <div class="tarj tarj--doc"><span class="doc-ico doc-ico--cert">✓</span><div><strong>{{persona.m_cert3}}</strong></div><span class="mini-boton">↓ {{persona.m_disponible}}</span></div>
+            </div>
+          </div>
+          <nav class="area-nav"><span class="activo">⌂<small>{{persona.nav_inicio}}</small></span><span>▤<small>{{persona.nav_insc}}</small></span><span>▶<small>{{persona.nav_aula}}</small></span><span>◉<small>{{persona.nav_perfil}}</small></span></nav>
+        </div>
+      </div>
+      <div class="persona__puntos"><i></i><i></i><i></i><i></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROGRAMA ============ -->
+<section class="seccion seccion--programa" id="programa">
+  <div class="envoltura">
+    <div class="programa__cabeza">
+      <header class="seccion__cabeza">
+        <p class="rotulo">{{programa.rotulo}}</p>
+        <h2>{{programa.titulo}}</h2>
+        <p class="entradilla">{{programa.entrada}}</p>
+      </header>
+      <ul class="programa__puntos">
+        <li>{{programa.p1}}</li>
+        <li>{{programa.p2}}</li>
+        <li>{{programa.p3}}</li>
+      </ul>
+    </div>
+
+    <div class="parrilla-marco">
+      <div class="parrilla-barra">
+        <div class="dias" aria-hidden="true"><span>{{programa.dia1}}</span><span class="activo">{{programa.dia2}}</span><span>{{programa.dia3}}</span></div>
+        <div class="filtros" id="filtros">
+          <button type="button" data-filtro="" aria-pressed="true">{{programa.filtro_todo}}</button>
+          <button type="button" data-filtro="plenaria" aria-pressed="false"><i class="t-plenaria"></i>{{programa.filtro_plenaria}}</button>
+          <button type="button" data-filtro="mesa" aria-pressed="false"><i class="t-mesa"></i>{{programa.filtro_mesa}}</button>
+          <button type="button" data-filtro="com" aria-pressed="false"><i class="t-com"></i>{{programa.filtro_com}}</button>
+          <button type="button" data-filtro="taller" aria-pressed="false"><i class="t-taller"></i>{{programa.filtro_taller}}</button>
+        </div>
+        <span class="parrilla-version">● {{programa.version}} · <u>{{programa.pdf}}</u></span>
+      </div>
+      <p class="parrilla-fecha">{{programa.fecha}}</p>
+      <div class="parrilla" id="parrilla">
+        <div class="parrilla__sala" style="--c:2">{{programa.sala1}}</div>
+        <div class="parrilla__sala" style="--c:3">{{programa.sala2}}</div>
+        <div class="parrilla__sala" style="--c:4">{{programa.sala3}}</div>
+        <span class="hora" style="--f:2">09:00</span>
+        <span class="hora" style="--f:4">10:00</span>
+        <span class="hora" style="--f:6">11:00</span>
+        <span class="hora" style="--f:8">12:00</span>
+        <span class="hora" style="--f:10">13:00</span>
+
+        <article class="ses ses--plenaria" data-tipo="plenaria" style="--c:2;--f:2;--h:1"><small>09:00 · {{programa.s1_tipo}}</small><strong>{{programa.s1_t}}</strong><span class="ses__sala">{{programa.sala1}}</span></article>
+        <article class="ses ses--com" data-tipo="com" style="--c:3;--f:2;--h:3"><small>09:00 · {{programa.s4_tipo}}</small><strong>{{programa.s4_t}}</strong><span class="ses__sala">{{programa.sala2}}</span><span class="ses__gente">▤ {{programa.s4_p}}</span></article>
+        <article class="ses ses--taller" data-tipo="taller" style="--c:4;--f:2;--h:3"><small>09:00 · {{programa.s3_tipo}} <em class="ses__linea">◉ {{programa.hibrida}}</em></small><strong>{{programa.s3_t}}</strong><span class="ses__sala">{{programa.sala3}}</span><span class="ses__gente"><i>ME</i>{{programa.s3_p}}</span></article>
+        <article class="ses ses--plenaria" data-tipo="plenaria" style="--c:2;--f:3;--h:2"><small>09:30 · {{programa.s2_tipo}}</small><strong>{{programa.s2_t}}</strong><span class="ses__sala">{{programa.sala1}}</span><span class="ses__gente"><i>RL</i>{{programa.s2_p}}</span></article>
+        <div class="ses-pausa" style="--f:5">☕ 10:30 · {{programa.pausa}}</div>
+        <article class="ses ses--mesa" data-tipo="mesa" style="--c:2;--f:6;--h:3"><small>11:00 · {{programa.s5_tipo}}</small><strong>{{programa.s5_t}}</strong><span class="ses__sala">{{programa.sala1}}</span><span class="ses__gente"><i>HS</i><i>CM</i><i>LB</i>{{programa.s5_p}}</span></article>
+        <article class="ses ses--com" data-tipo="com" style="--c:3;--f:6;--h:3"><small>11:00 · {{programa.s6_tipo}}</small><strong>{{programa.s6_t}}</strong><span class="ses__sala">{{programa.sala2}}</span><span class="ses__gente">▤ {{programa.s6_p}}</span></article>
+        <article class="ses ses--taller" data-tipo="taller" style="--c:4;--f:6;--h:3"><small>11:00 · {{programa.s7_tipo}} <em class="ses__linea">◉ {{programa.en_linea}}</em></small><strong>{{programa.s7_t}}</strong><span class="ses__sala">{{programa.sala3}}</span><span class="ses__gente"><i>CM</i>{{programa.s7_p}}</span></article>
+        <article class="ses ses--mesa" data-tipo="mesa" style="--c:2;--f:9;--h:3"><small>12:30 · {{programa.s8_tipo}}</small><strong>{{programa.s8_t}}</strong><span class="ses__sala">{{programa.sala1}}</span><span class="ses__gente"><i>ME</i><i>HS</i>{{programa.s8_p}}</span></article>
+        <article class="ses ses--com" data-tipo="com" style="--c:3;--f:9;--h:3"><small>12:30 · {{programa.s9_tipo}}</small><strong>{{programa.s9_t}}</strong><span class="ses__sala">{{programa.sala2}}</span><span class="ses__gente">▣ {{programa.s9_p}}</span></article>
+      </div>
+      <p class="demo__aviso">{{programa.aviso}}</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MÓDULOS ============ -->
+<section class="seccion seccion--suave" id="modulos">
+  <div class="envoltura">
+    <header class="seccion__cabeza">
+      <p class="rotulo">{{modulos.rotulo}}</p>
+      <h2>{{modulos.titulo}}</h2>
+      <p class="entradilla">{{modulos.entrada}}</p>
+    </header>
+    <div class="modulos">
+
+      <article class="modulo">
+        <div class="vis vis--evaluacion" aria-hidden="true">
+          <div class="vis-ciego"><span class="av av--borroso">A</span><span class="chip chip--tinta">{{vis.ciego}}</span><span class="av av--borroso">B</span></div>
+          <div class="vis-barras"><i style="--v:85%"></i><i style="--v:78%"></i><i style="--v:92%"></i></div>
+          <div class="vis-nota"><small>{{vis.media}}</small><b>8,6</b></div>
+        </div>
+        <div class="modulo__cuerpo"><h3>{{modulos.evaluacion_t}}</h3><p>{{modulos.evaluacion_d}}</p></div>
+      </article>
+
+      <article class="modulo">
+        <div class="vis vis--inscripciones" aria-hidden="true">
+          <div class="tarifas">
+            <div class="tarifa"><span>{{vis.general}}</span><b>350 €</b></div>
+            <div class="tarifa tarifa--dest"><span>{{vis.residentes}}</span><b>150 €</b></div>
+            <div class="tarifa"><span>{{vis.en_linea}}</span><b>120 €</b></div>
+          </div>
+          <div class="cupo"><i style="--v:78%"></i><small>{{vis.plazas}}</small></div>
+        </div>
+        <div class="modulo__cuerpo"><h3>{{modulos.inscripciones_t}}</h3><p>{{modulos.inscripciones_d}}</p></div>
+      </article>
+
+      <article class="modulo">
+        <div class="vis vis--facturacion" aria-hidden="true">
+          <div class="papel papel--atras"><small>{{vis.rectificativa}}</small><b>R26-0004</b></div>
+          <div class="papel"><small>{{vis.factura}}</small><b>HS26-0143</b><i></i><i></i><i class="corta"></i><span class="sello-redondo">{{vis.emitida}}</span></div>
+        </div>
+        <div class="modulo__cuerpo"><h3>{{modulos.facturacion_t}}</h3><p>{{modulos.facturacion_d}}</p></div>
+      </article>
+
+      <article class="modulo">
+        <div class="vis vis--terceros" aria-hidden="true">
+          <div class="codigos"><span class="codigo">ASOCIADAS20 <b>−20 %</b></span><span class="codigo codigo--inv">PONENTES <b>{{vis.invitacion}}</b></span></div>
+          <div class="entidad"><span class="av av--entidad">HN</span><div><strong>{{vis.entidad}}</strong><div class="cupo cupo--peq"><i style="--v:70%"></i></div><small>{{vis.plazas_ent}}</small></div></div>
+        </div>
+        <div class="modulo__cuerpo"><h3>{{modulos.terceros_t}}</h3><p>{{modulos.terceros_d}}</p></div>
+      </article>
+
+      <article class="modulo">
+        <div class="vis vis--acreditaciones" aria-hidden="true">
+          <div class="mini-pase" style="--r:-8deg;--col:#12B5A6"><span class="qr"></span><small>{{vis.congresista}}</small></div>
+          <div class="mini-pase" style="--r:0deg;--col:#F2A541"><span class="qr"></span><small>{{vis.ponente}}</small></div>
+          <div class="mini-pase" style="--r:8deg;--col:#6C7FD8"><span class="qr"></span><small>{{vis.comite}}</small></div>
+        </div>
+        <div class="modulo__cuerpo"><h3>{{modulos.acreditaciones_t}}</h3><p>{{modulos.acreditaciones_d}}</p></div>
+      </article>
+
+      <article class="modulo">
+        <div class="vis vis--asistencia" aria-hidden="true">
+          <div class="anillo" style="--v:92"><b>92 %</b><small>{{vis.cumple}}</small></div>
+          <div class="asis-datos">
+            <span><i class="l-pres"></i>{{vis.presencial}} · 11 h 20</span>
+            <span><i class="l-lin"></i>{{vis.en_linea}} · 2 h 30</span>
+            <span class="chip chip--ok">{{vis.creditos}}</span>
+          </div>
+        </div>
+        <div class="modulo__cuerpo"><h3>{{modulos.asistencia_t}}</h3><p>{{modulos.asistencia_d}}</p></div>
+      </article>
+
+      <article class="modulo">
+        <div class="vis vis--encuestas" aria-hidden="true">
+          <div class="enc"><small>{{vis.valoracion}}</small><div class="estrellas estrellas--fijas"><i></i><i></i><i></i><i></i><i class="media"></i></div></div>
+          <div class="cert-mini"><span>✓</span>{{vis.certificado}}</div>
+        </div>
+        <div class="modulo__cuerpo"><h3>{{modulos.encuestas_t}}</h3><p>{{modulos.encuestas_d}}</p></div>
+      </article>
+
+      <article class="modulo">
+        <div class="vis vis--asistente" aria-hidden="true">
+          <div class="mini-burbuja mini-burbuja--yo">{{vis.pregunta}}</div>
+          <div class="mini-burbuja"><span class="destello">✦</span> {{vis.respuesta}}</div>
+        </div>
+        <div class="modulo__cuerpo"><h3>{{modulos.asistente_t}}</h3><p>{{modulos.asistente_d}}</p></div>
+      </article>
+
+      <article class="modulo">
+        <div class="vis vis--aula" aria-hidden="true">
+          <div class="videos">
+            <span class="video video--habla"><b>RL</b></span>
+            <span class="video"><b>HS</b></span>
+            <span class="video"><b>CM</b><em class="mano">✋</em></span>
+            <span class="video"><b>LB</b></span>
+          </div>
+          <div class="aula-pie"><span class="rec">● {{vis.grabando}}</span><span>{{vis.asistentes}}</span><span class="chip chip--ambar">✋ {{vis.turno}}</span></div>
+        </div>
+        <div class="modulo__cuerpo"><h3>{{modulos.aula_t}}</h3><p>{{modulos.aula_d}}</p></div>
+      </article>
+
+      <article class="modulo">
+        <div class="vis vis--correos" aria-hidden="true">
+          <div class="correo"><span class="sobre">✉</span><span>{{vis.c1}}</span><em class="ok">✓ {{vis.enviado}}</em></div>
+          <div class="correo"><span class="sobre">✉</span><span>{{vis.c2}}</span><em class="ok">✓ {{vis.enviado}}</em></div>
+          <div class="correo"><span class="sobre">✉</span><span>{{vis.c3}}</span><em class="cola">◷ {{vis.cola}}</em></div>
+          <div class="idiomas"><span>ES</span><span>EN</span><span>PT</span></div>
+        </div>
+        <div class="modulo__cuerpo"><h3>{{modulos.correos_t}}</h3><p>{{modulos.correos_d}}</p></div>
+      </article>
+
+      <article class="modulo">
+        <div class="vis vis--multiempresa" aria-hidden="true">
+          <div class="org" style="--col:#E76F51"><span>AC</span><small>{{vis.org1}}</small><em>8 {{vis.congresos}}</em></div>
+          <div class="org" style="--col:#1D3557"><span>HS</span><small>{{vis.org2}}</small><em>3 {{vis.congresos}}</em></div>
+          <div class="org" style="--col:#6C7FD8"><span>UA</span><small>{{vis.org3}}</small><em>5 {{vis.congresos}}</em></div>
+        </div>
+        <div class="modulo__cuerpo"><h3>{{modulos.multiempresa_t}}</h3><p>{{modulos.multiempresa_d}}</p></div>
+      </article>
+
+      <article class="modulo modulo--mas">
+        <div class="modulo__cuerpo"><h3>{{modulos.mas_t}}</h3><p>{{modulos.mas_d}}</p><a class="boton boton--acento" href="#demo">{{modulos.mas_cta}}</a></div>
+      </article>
+
+    </div>
+    <p class="demo__aviso modulos__aviso">{{modulos.aviso}}</p>
+  </div>
+</section>
+
+<!-- ============ DETALLES ============ -->
+<section class="seccion" id="producto">
+  <div class="envoltura">
+    <header class="seccion__cabeza">
+      <p class="rotulo">{{detalles.rotulo}}</p>
+      <h2>{{detalles.titulo}}</h2>
+    </header>
+    <ul class="detalles">
+      <li><span class="detalles__icono" data-icono="marca"></span><h3>{{detalles.i1_t}}</h3><p>{{detalles.i1_d}}</p></li>
+      <li><span class="detalles__icono" data-icono="idiomas"></span><h3>{{detalles.i2_t}}</h3><p>{{detalles.i2_d}}</p></li>
+      <li><span class="detalles__icono" data-icono="llave"></span><h3>{{detalles.i3_t}}</h3><p>{{detalles.i3_d}}</p></li>
+      <li><span class="detalles__icono" data-icono="persona"></span><h3>{{detalles.i4_t}}</h3><p>{{detalles.i4_d}}</p></li>
+      <li><span class="detalles__icono" data-icono="movil"></span><h3>{{detalles.i5_t}}</h3><p>{{detalles.i5_d}}</p></li>
+      <li><span class="detalles__icono" data-icono="enlace"></span><h3>{{detalles.i6_t}}</h3><p>{{detalles.i6_d}}</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ PARA QUIÉN ============ -->
+<section class="seccion seccion--tinta" id="para-quien">
+  <div class="envoltura">
+    <header class="seccion__cabeza">
+      <p class="rotulo rotulo--claro">{{para.rotulo}}</p>
+      <h2>{{para.titulo}}</h2>
+    </header>
+    <div class="perfiles">
+      <article class="perfil"><span class="perfil__num">01</span><h3>{{para.opc_t}}</h3><p>{{para.opc_d}}</p></article>
+      <article class="perfil"><span class="perfil__num">02</span><h3>{{para.soc_t}}</h3><p>{{para.soc_d}}</p></article>
+      <article class="perfil"><span class="perfil__num">03</span><h3>{{para.uni_t}}</h3><p>{{para.uni_d}}</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PREGUNTAS ============ -->
+<section class="seccion" id="preguntas">
+  <div class="envoltura envoltura--estrecha">
+    <header class="seccion__cabeza">
+      <p class="rotulo">{{preguntas.rotulo}}</p>
+      <h2>{{preguntas.titulo}}</h2>
+    </header>
+    <div class="faq">
+      <details><summary>{{preguntas.q1}}</summary><p>{{preguntas.a1}}</p></details>
+      <details><summary>{{preguntas.q2}}</summary><p>{{preguntas.a2}}</p></details>
+      <details><summary>{{preguntas.q3}}</summary><p>{{preguntas.a3}}</p></details>
+      <details><summary>{{preguntas.q4}}</summary><p>{{preguntas.a4}}</p></details>
+      <details><summary>{{preguntas.q5}}</summary><p>{{preguntas.a5}}</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOLICITAR DEMO ============ -->
+<section class="seccion seccion--demo" id="demo">
+  <div class="envoltura contacto">
+    <div class="contacto__texto">
+      <p class="rotulo rotulo--claro">{{contacto.rotulo}}</p>
+      <h2>{{contacto.titulo}}</h2>
+      <p class="entradilla">{{contacto.entrada}}</p>
+      <ul class="lista-ok"><li>{{contacto.lista1}}</li><li>{{contacto.lista2}}</li><li>{{contacto.lista3}}</li></ul>
+    </div>
+    <form class="formulario" id="formulario" novalidate data-destino="{{contacto.correo_destino}}" data-asunto="{{contacto.asunto}}">
+      <label class="f-campo"><span>{{contacto.nombre}}</span><input name="nombre" autocomplete="name" required></label>
+      <label class="f-campo"><span>{{contacto.entidad}}</span><input name="entidad" autocomplete="organization" required></label>
+      <label class="f-campo"><span>{{contacto.tipo}}</span>
+        <select name="tipo" required>
+          <option value="">{{contacto.tipo_elegir}}</option>
+          <option>{{contacto.tipo_opc}}</option>
+          <option>{{contacto.tipo_soc}}</option>
+          <option>{{contacto.tipo_uni}}</option>
+          <option>{{contacto.tipo_otra}}</option>
+        </select>
+      </label>
+      <div class="f-doble">
+        <label class="f-campo"><span>{{contacto.correo}}</span><input name="correo" type="email" autocomplete="email" required></label>
+        <label class="f-campo"><span>{{contacto.telefono}}</span><input name="telefono" type="tel" autocomplete="tel"></label>
+      </div>
+      <label class="f-campo"><span>{{contacto.mensaje}}</span><textarea name="mensaje" rows="3" placeholder="{{contacto.mensaje_ph}}"></textarea></label>
+      <label class="f-check"><input type="checkbox" name="privacidad" required><span>{{contacto.privacidad}}</span></label>
+      <input class="f-trampa" name="web" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="boton boton--acento boton--grande boton--bloque" type="submit">{{contacto.enviar}}</button>
+      <p class="f-estado" role="status" data-error="{{contacto.obligatorio}}" data-gracias="{{contacto.gracias}}"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ PIE ============ -->
+<footer class="pie">
+  <div class="envoltura pie__fila">
+    <a class="marca marca--clara" href="#" aria-label="{{nav.inicio}}">
+      <svg class="marca__icono" viewBox="0 0 32 32" aria-hidden="true"><use href="#logo"/></svg>
+      <span class="marca__nombre">congresly</span>
+    </a>
+    <p>{{pie.lema}}</p>
+    <p><a href="#demo">{{pie.contacto}}</a> · {{pie.derechos}}</p>
+  </div>
+</footer>
+
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="logo" viewBox="0 0 32 32">
+    <rect width="32" height="32" rx="9" fill="#12B5A6"/>
+    <path d="M21.5 10.2A8 8 0 1 0 21.5 21.8" fill="none" stroke="#0E1A2B" stroke-width="3.4" stroke-linecap="round"/>
+    <circle cx="22.4" cy="16" r="2.4" fill="#F6F4EF"/>
+  </symbol>
+</svg>
+
+<script src="web.js?v=[[VERSION]]" defer></script>
+</body>
+</html>
