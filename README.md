@@ -30,6 +30,8 @@ node construir.mjs
 
 ## Pendiente
 
+- **Resumen funcional**: los botones de descarga apuntan a `descargas/congresly-resumen-funcional.pdf`, que aún no existe. Llevan `data-evento="descarga_resumen"` para medir los clics si se añade analítica.
+
 - **Dominio**: `www.congresly.com` (`DOMINIO` en `construir.mjs` y fichero `CNAME`). En el registrador: registro CNAME `www` → `soyjesusbenabat-oss.github.io` y, para que `congresly.com` sin www también funcione, registros A del dominio raíz a 185.199.108.153, 185.199.109.153, 185.199.110.153 y 185.199.111.153. En GitHub: Settings → Pages → Custom domain `www.congresly.com` y «Enforce HTTPS».
 - **Formulario**: ahora abre el programa de correo con la solicitud preparada para info@intracom.es. Falta elegir un servicio de formularios.
 - **Textos legales**: hechos con los datos de Portal Intracom; pendiente de revisión por asesoría jurídica.

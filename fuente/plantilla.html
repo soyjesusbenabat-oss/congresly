@@ -45,6 +45,7 @@
       <a href="#congresista">{{nav.congresista}}</a>
       <a href="#modulos">{{nav.modulos}}</a>
       <a href="#para-quien">{{nav.para_quien}}</a>
+      <a href="#seguridad">{{nav.seguridad}}</a>
       <a href="#preguntas">{{nav.preguntas}}</a>
       <a class="boton boton--acento menu__cta" href="#demo">{{nav.cta}}</a>
     </nav>
@@ -80,12 +81,22 @@
   </div>
 </section>
 
-<!-- ============ PRUEBA REAL ============ -->
-<section class="prueba">
-  <div class="envoltura prueba__fila">
-    <p class="rotulo rotulo--claro">{{prueba.rotulo}}</p>
-    <p class="prueba__texto">{{prueba.texto}}</p>
-    <div class="prueba__nombres" aria-hidden="true"><span>{{prueba.c1}}</span><span>{{prueba.c2}}</span></div>
+<!-- ============ CIENCIAS DE LA SALUD ============ -->
+<section class="salud" id="salud">
+  <div class="envoltura">
+    <div class="salud__cabeza">
+      <div>
+        <p class="rotulo rotulo--claro">{{salud.rotulo}}</p>
+        <h2 class="salud__titulo">{{salud.titulo}}</h2>
+      </div>
+      <a class="salud__enlace" href="#seguridad">{{salud.enlace}} <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="salud__rejilla">
+      <div class="salud__bloque"><span class="salud__icono"><svg class="icono" aria-hidden="true"><use href="#i-creditos"/></svg></span><h3>{{salud.b1_t}}</h3><p>{{salud.b1_d}}</p></div>
+      <div class="salud__bloque"><span class="salud__icono"><svg class="icono" aria-hidden="true"><use href="#i-industria"/></svg></span><h3>{{salud.b2_t}}</h3><p>{{salud.b2_d}}</p></div>
+      <div class="salud__bloque"><span class="salud__icono"><svg class="icono" aria-hidden="true"><use href="#i-comunicacion"/></svg></span><h3>{{salud.b3_t}}</h3><p>{{salud.b3_d}}</p></div>
+      <div class="salud__bloque"><span class="salud__icono"><svg class="icono" aria-hidden="true"><use href="#i-escudo"/></svg></span><h3>{{salud.b4_t}}</h3><p>{{salud.b4_d}}</p></div>
+    </div>
   </div>
 </section>
 
@@ -543,7 +554,7 @@
       </article>
 
       <article class="modulo modulo--mas">
-        <div class="modulo__cuerpo"><h3>{{modulos.mas_t}}</h3><p>{{modulos.mas_d}}</p><a class="boton boton--acento" href="#demo">{{modulos.mas_cta}}</a></div>
+        <div class="modulo__cuerpo"><h3>{{modulos.mas_t}}</h3><p>{{modulos.mas_d}}</p><a class="boton boton--acento" href="#demo">{{modulos.mas_cta}}</a><a class="modulo__descarga" href="descargas/congresly-resumen-funcional.pdf" download data-evento="descarga_resumen">{{descarga.enlace_corto}}</a></div>
       </article>
 
     </div>
@@ -566,6 +577,26 @@
       <li><span class="detalles__icono" data-icono="movil"></span><h3>{{detalles.i5_t}}</h3><p>{{detalles.i5_d}}</p></li>
       <li><span class="detalles__icono" data-icono="enlace"></span><h3>{{detalles.i6_t}}</h3><p>{{detalles.i6_d}}</p></li>
     </ul>
+  </div>
+</section>
+
+<!-- ============ SEGURIDAD Y CUMPLIMIENTO ============ -->
+<section class="seccion seccion--suave" id="seguridad">
+  <div class="envoltura">
+    <header class="seccion__cabeza">
+      <p class="rotulo">{{seguridad.rotulo}}</p>
+      <h2>{{seguridad.titulo}}</h2>
+      <p class="entradilla">{{seguridad.entrada}}</p>
+    </header>
+    <div class="seguridad">
+      <article class="seguro"><span class="detalles__icono seguro__icono"><svg class="icono" aria-hidden="true"><use href="#i-capas"/></svg></span><h3>{{seguridad.s1_t}}</h3><p>{{seguridad.s1_d}}</p></article>
+      <article class="seguro"><span class="detalles__icono seguro__icono"><svg class="icono" aria-hidden="true"><use href="#i-documento"/></svg></span><h3>{{seguridad.s2_t}}</h3><p>{{seguridad.s2_d}}</p></article>
+      <article class="seguro"><span class="detalles__icono seguro__icono"><svg class="icono" aria-hidden="true"><use href="#i-llave"/></svg></span><h3>{{seguridad.s3_t}}</h3><p>{{seguridad.s3_d}}</p></article>
+      <article class="seguro"><span class="detalles__icono seguro__icono"><svg class="icono" aria-hidden="true"><use href="#i-historial"/></svg></span><h3>{{seguridad.s4_t}}</h3><p>{{seguridad.s4_d}}</p></article>
+      <article class="seguro"><span class="detalles__icono seguro__icono"><svg class="icono" aria-hidden="true"><use href="#i-tarjeta"/></svg></span><h3>{{seguridad.s5_t}}</h3><p>{{seguridad.s5_d}}</p></article>
+      <article class="seguro"><span class="detalles__icono seguro__icono"><svg class="icono" aria-hidden="true"><use href="#i-candado"/></svg></span><h3>{{seguridad.s6_t}}</h3><p>{{seguridad.s6_d}}</p></article>
+    </div>
+    <div class="sellos"><span class="sellos__titulo">{{seguridad.sellos_t}}</span><ul><li>{{seguridad.sellos.0}}</li><li>{{seguridad.sellos.1}}</li><li>{{seguridad.sellos.2}}</li><li>{{seguridad.sellos.3}}</li><li>{{seguridad.sellos.4}}</li></ul></div>
   </div>
 </section>
 
@@ -597,6 +628,11 @@
       <details><summary>{{preguntas.q3}}</summary><p>{{preguntas.a3}}</p></details>
       <details><summary>{{preguntas.q4}}</summary><p>{{preguntas.a4}}</p></details>
       <details><summary>{{preguntas.q5}}</summary><p>{{preguntas.a5}}</p></details>
+      <details><summary>{{preguntas.q6}}</summary><p>{{preguntas.a6}}</p></details>
+      <details><summary>{{preguntas.q7}}</summary><p>{{preguntas.a7}}</p></details>
+      <details><summary>{{preguntas.q8}}</summary><p>{{preguntas.a8}}</p></details>
+      <details><summary>{{preguntas.q9}}</summary><p>{{preguntas.a9}}</p></details>
+      <details><summary>{{preguntas.q10}}</summary><p>{{preguntas.a10}}</p></details>
     </div>
   </div>
 </section>
@@ -609,6 +645,11 @@
       <h2>{{contacto.titulo}}</h2>
       <p class="entradilla">{{contacto.entrada}}</p>
       <ul class="lista-ok"><li>{{contacto.lista1}}</li><li>{{contacto.lista2}}</li><li>{{contacto.lista3}}</li></ul>
+      <div class="descarga">
+        <p>{{descarga.texto}}</p>
+        <a class="boton boton--claro" href="descargas/congresly-resumen-funcional.pdf" download data-evento="descarga_resumen">{{descarga.boton}}</a>
+        <span class="descarga__detalle">{{descarga.detalle}}</span>
+      </div>
     </div>
     <form class="formulario" id="formulario" novalidate data-destino="{{contacto.correo_destino}}" data-asunto="{{contacto.asunto}}">
       <label class="f-campo"><span>{{contacto.nombre}}</span><input name="nombre" autocomplete="name" required></label>
@@ -651,6 +692,16 @@
 
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-creditos" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M9 14.5 7.5 22l4.5-2.5 4.5 2.5-1.5-7.5"/><path d="m9.5 9 1.8 1.8L14.8 7.3"/></symbol>
+  <symbol id="i-industria" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l6 3.5V10l6 3.5V5h6v16z"/><path d="M7 17h2M12 17h2M17 17h1"/></symbol>
+  <symbol id="i-comunicacion" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></symbol>
+  <symbol id="i-escudo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v5.5c0 4.7 3.1 8.2 7.5 9.5 4.4-1.3 7.5-4.8 7.5-9.5V6z"/><path d="m9 12 2.2 2.2L15.5 10"/></symbol>
+  <symbol id="i-capas" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></symbol>
+  <symbol id="i-documento" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="m9 14.5 2 2 4-4"/></symbol>
+  <symbol id="i-llave" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9M17 6l3 3M15 8l2 2"/></symbol>
+  <symbol id="i-historial" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 12a8.5 8.5 0 1 0 2.5-6"/><path d="M3 4v4h4M12 8v4.5l3 2"/></symbol>
+  <symbol id="i-tarjeta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19M6.5 15h4"/></symbol>
+  <symbol id="i-candado" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10.5" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3M12 15v2.5"/></symbol>
   <symbol id="logo" viewBox="0 0 32 32">
     <rect width="32" height="32" rx="9" fill="#12B5A6"/>
     <path d="M21.5 10.2A8 8 0 1 0 21.5 21.8" fill="none" stroke="#0E1A2B" stroke-width="3.4" stroke-linecap="round"/>

@@ -96,13 +96,6 @@ button { font: inherit; color: inherit; }
 @keyframes flota { 50% { transform: translateY(-8px); } }
 
 /* Prueba */
-.prueba { background: var(--tinta); color: #fff; padding: 34px 0; }
-.prueba__fila { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 32px; align-items: center; }
-.prueba .rotulo { margin: 0; }
-.prueba__texto { color: #C9D1DC; font-size: 1rem; }
-.prueba__texto strong { color: #fff; }
-.prueba__nombres { display: flex; gap: 12px; }
-.prueba__nombres span { font-family: var(--mono); font-weight: 600; letter-spacing: .08em; font-size: .82rem; border: 1px solid rgba(255, 255, 255, .22); border-radius: 999px; padding: 8px 14px; }
 
 /* Secciones */
 .seccion { padding: 104px 0; }
@@ -394,8 +387,7 @@ button { font: inherit; color: inherit; }
   .demo { grid-template-columns: minmax(0, 1fr); padding: 32px; gap: 32px; }
   .modulos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .detalles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .prueba__fila { grid-template-columns: 1fr; gap: 14px; }
-}
+  }
 
 /* ---------- Móvil ---------- */
 @media (max-width: 760px) {
@@ -697,3 +689,46 @@ button { font: inherit; color: inherit; }
 .legal__otros a { text-decoration: none; border: 1px solid var(--linea); border-radius: 999px; padding: 6px 14px; font-weight: 600; font-size: .9rem; color: var(--tinta); }
 .legal__volver { padding: 8px 16px; font-size: .9rem; }
 .f-check a { color: var(--acento-osc); }
+
+/* ---------- Ciencias de la salud (franja oscura bajo la portada) ---------- */
+.icono { width: 24px; height: 24px; display: block; }
+.salud { background: var(--tinta); color: #fff; padding: 56px 0 60px; }
+.salud__cabeza { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px 48px; margin-bottom: 36px; }
+.salud__titulo { font-size: clamp(1.5rem, 2.6vw, 2.05rem); max-width: 24ch; }
+.salud__enlace { color: var(--acento); font-weight: 700; text-decoration: none; white-space: nowrap; }
+.salud__enlace:hover { text-decoration: underline; }
+.salud__rejilla { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.salud__bloque { border: 1px solid rgba(255, 255, 255, .12); border-radius: 16px; padding: 22px; background: rgba(255, 255, 255, .03); }
+.salud__icono { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; background: rgba(18, 181, 166, .16); color: var(--acento); }
+.salud__bloque h3 { font-size: 1.04rem; margin: 16px 0 8px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.salud__bloque p { color: #B8C2CF; font-size: .92rem; margin: 0; }
+
+/* ---------- Seguridad y cumplimiento ---------- */
+.seguridad { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.seguro { background: #fff; border: 1px solid var(--linea); border-radius: var(--radio); padding: 26px; }
+.seguro__icono { color: var(--acento-osc); }
+.seguro__icono::before { content: none; }
+.seguro h3 { font-size: 1.06rem; margin: 16px 0 8px; }
+.seguro p { color: var(--gris); font-size: .93rem; margin: 0; }
+.sellos { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; margin-top: 28px; padding: 16px 0; border-top: 1px solid var(--linea); border-bottom: 1px solid var(--linea); }
+.sellos__titulo { font-family: var(--mono); font-size: .74rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--gris-claro); }
+.sellos ul { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; }
+.sellos li { font-size: .84rem; font-weight: 700; border: 1px solid var(--linea); background: #fff; border-radius: 999px; padding: 6px 14px; }
+
+/* ---------- Descarga del resumen funcional ---------- */
+.boton--claro { border-color: rgba(255, 255, 255, .45); color: #fff; background: transparent; }
+.boton--claro:hover { background: #fff; color: var(--tinta); border-color: #fff; }
+.descarga { margin-top: 36px; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, .12); display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; }
+.descarga p { width: 100%; margin: 0; color: #B8C2CF; }
+.descarga__detalle { font-family: var(--mono); font-size: .76rem; color: #8D98A8; }
+.modulo__descarga { display: block; margin-top: 14px; color: #B8C2CF; font-size: .88rem; }
+.modulo__descarga:hover { color: #fff; }
+
+@media (max-width: 1060px) {
+  .salud__rejilla, .seguridad { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+  .salud { padding: 44px 0 48px; }
+  .salud__cabeza { flex-direction: column; align-items: flex-start; }
+  .salud__rejilla, .seguridad { grid-template-columns: minmax(0, 1fr); }
+}

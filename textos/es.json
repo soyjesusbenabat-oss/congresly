@@ -17,7 +17,8 @@
     "menu": "Abrir el menú",
     "cerrar": "Cerrar el menú",
     "inicio": "Congresly, inicio",
-    "congresista": "Congresistas"
+    "congresista": "Congresistas",
+    "seguridad": "Seguridad"
   },
   "hero": {
     "rotulo": "Plataforma de gestión de congresos",
@@ -34,11 +35,18 @@
     "chip_cert_det": "Encuesta respondida",
     "captura_alt": "Resumen de un congreso en el panel de Congresly: qué toca ahora, comunicaciones, inscripciones y cobros"
   },
-  "prueba": {
-    "rotulo": "Probada en congresos reales",
-    "texto": "Antes de ofrecérsela, la hemos usado para organizar congresos internacionales como <strong>GENDERCOM</strong> y <strong>MEDIAETHICS</strong>: cada función nace de un problema real de una edición real.",
-    "c1": "GENDERCOM",
-    "c2": "MEDIAETHICS"
+  "salud": {
+    "rotulo": "Ciencias de la salud",
+    "titulo": "Pensada para los congresos de las sociedades médicas y sanitarias",
+    "b1_t": "Formación continuada",
+    "b1_d": "Minutos de asistencia presencial y en línea, test, encuesta y certificado de créditos, con el informe que pide la comisión acreditadora.",
+    "b2_t": "Plazas pagadas por la industria",
+    "b2_d": "Laboratorios e instituciones compran plazas para profesionales, con su propia factura y la trazabilidad de cada plaza.",
+    "b3_t": "Comunicaciones científicas",
+    "b3_d": "Resúmenes, revisión en doble ciego con rúbricas, comité científico, pósteres y premios.",
+    "b4_t": "Datos protegidos",
+    "b4_d": "Cada sociedad, con sus datos separados, sus textos legales y el historial de quién cambió qué.",
+    "enlace": "Cómo protegemos los datos"
   },
   "como": {
     "rotulo": "Cómo funciona",
@@ -222,6 +230,31 @@
     "i6_t": "Conectado con IA",
     "i6_d": "Su equipo puede consultar y operar el congreso desde su asistente de IA, con los mismos permisos que en el panel."
   },
+  "seguridad": {
+    "rotulo": "Seguridad y cumplimiento",
+    "titulo": "Los datos de su congreso, protegidos y bajo su control",
+    "entrada": "Una sociedad científica trata datos de profesionales, pagos y, a veces, información sensible como alergias o necesidades de accesibilidad. Congresly está construida para que cumplir la normativa no dependa de la buena voluntad de nadie.",
+    "s1_t": "Datos separados por organización",
+    "s1_d": "Cada organización tiene sus congresos, su equipo y sus personas inscritas separados en la propia base de datos. Ninguna ve los datos de otra.",
+    "s2_t": "RGPD desde el primer acceso",
+    "s2_d": "Cada persona acepta el tratamiento de sus datos al entrar por primera vez, con los textos legales de su organización. Congresly actúa como encargada del tratamiento, con su contrato correspondiente.",
+    "s3_t": "Cada uno ve solo lo suyo",
+    "s3_d": "Permisos por papel: administración, comité científico, revisión anónima, solo lectura o lector de puerta. El asistente de IA respeta los mismos permisos.",
+    "s4_t": "Historial de todos los cambios",
+    "s4_d": "Quién cambió qué y cuándo, con el valor anterior y el nuevo, también cuando el cambio lo propone el asistente de IA.",
+    "s5_t": "Pagos y facturas en regla",
+    "s5_d": "Los pagos con tarjeta se hacen en la pasarela de Redsys, firmados y verificados. Las facturas tienen numeración propia y se corrigen con factura rectificativa, nunca editándolas.",
+    "s6_t": "Sin datos personales a la vista",
+    "s6_d": "Los archivos son privados y se descargan con enlaces temporales. El QR de la acreditación no lleva datos personales: solo un código que se comprueba al leerlo.",
+    "sellos_t": "Además",
+    "sellos": [
+      "RGPD",
+      "Servidores en la Unión Europea",
+      "Preparada para Veri*factu",
+      "Certificados verificables",
+      "Acceso sin contraseñas"
+    ]
+  },
   "para": {
     "rotulo": "Para quién",
     "titulo": "Una plataforma, tres formas de organizar",
@@ -236,15 +269,25 @@
     "rotulo": "Preguntas frecuentes",
     "titulo": "Lo que suelen preguntarnos",
     "q1": "¿Tengo que instalar algo?",
-    "a1": "No. Congresly funciona en el navegador. El lector de acreditaciones también: basta un móvil con cámara.",
-    "q2": "¿Puedo usar la imagen de mi congreso?",
-    "a2": "Sí. Cada congreso lleva su logotipo, sus colores y sus textos, tanto en lo que ve el congresista como en los documentos que recibe.",
-    "q3": "¿Qué formas de pago admite?",
-    "a3": "Tarjeta a través de Redsys y transferencia bancaria, con factura automática en ambos casos.",
-    "q4": "¿Puedo empezar solo con algunos módulos?",
-    "a4": "Sí. Los módulos se activan por congreso: puede empezar, por ejemplo, con inscripciones y certificados, y añadir la evaluación o el aula virtual más adelante.",
-    "q5": "¿Cuánto cuesta?",
-    "a5": "Depende del tamaño del congreso y de los módulos que necesite. En la demostración vemos su caso y le preparamos una propuesta."
+    "a1": "No. Congresly funciona en el navegador del ordenador, la tableta y el móvil. El lector de acreditaciones también: basta un móvil con cámara.",
+    "q2": "¿Incluye la web del congreso?",
+    "a2": "Sí. Cada congreso tiene su web pública con su programa, sus convocatorias y su inscripción, con su logotipo y sus colores. Si lo desea, nuestro equipo la diseña a medida para su congreso.",
+    "q3": "¿Puedo usar la imagen de mi congreso?",
+    "a3": "Sí. Cada congreso lleva su logotipo, sus colores y sus textos, tanto en lo que ve el congresista como en las acreditaciones, las facturas y los certificados que recibe.",
+    "q4": "Ya usamos otra plataforma. ¿Podemos cambiar?",
+    "a4": "Sí. Le ayudamos a configurar su próximo congreso y a traer lo que necesite de ediciones anteriores, como listados de asistentes, revisores o tarifas. Lo habitual es hacer el cambio entre una edición y la siguiente.",
+    "q5": "¿Cuánto se tarda en poner un congreso en marcha?",
+    "a5": "Un congreso con inscripción y pago puede estar abierto en unos días. Si incluye convocatoria de comunicaciones, evaluación y una web a medida, conviene empezar unos meses antes de abrir la convocatoria.",
+    "q6": "¿Puedo empezar solo con algunos módulos?",
+    "a6": "Sí. Los módulos se activan por congreso: puede empezar, por ejemplo, con inscripciones y certificados, y añadir la evaluación o el aula virtual más adelante.",
+    "q7": "¿Qué formas de pago admite?",
+    "a7": "Tarjeta a través de Redsys, transferencia bancaria con validación del justificante y orden de compra institucional. En todos los casos se emite la factura a nombre de la persona o de su institución.",
+    "q8": "¿Dónde están los datos y quién es responsable de ellos?",
+    "a8": "Su organización es la responsable de los datos de su congreso y Congresly los trata por encargo suyo, con el contrato de encargado del tratamiento que exige el RGPD. Los datos de cada organización están separados de los demás.",
+    "q9": "¿Quién nos atiende si surge un problema durante el congreso?",
+    "a9": "Nuestro equipo, directamente, sin centralitas. Le acompañamos en la configuración, en la apertura de la inscripción y durante los días del congreso.",
+    "q10": "¿Cuánto cuesta?",
+    "a10": "Depende del tamaño del congreso y de los módulos que necesite. En la demostración vemos su caso y le preparamos una propuesta."
   },
   "contacto": {
     "rotulo": "Solicitar demo",
@@ -412,5 +455,11 @@
     "org2": "Horizonte Salud",
     "org3": "Univ. del Atlántico",
     "congresos": "congresos"
+  },
+  "descarga": {
+    "texto": "¿Prefiere verlo antes por su cuenta?",
+    "boton": "Descargar el resumen funcional",
+    "detalle": "PDF · 8 páginas",
+    "enlace_corto": "o descargue el resumen funcional (PDF)"
   }
 }

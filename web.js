@@ -191,7 +191,7 @@
     var aparecer = new IntersectionObserver(function (entradas) {
       entradas.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("visto"); aparecer.unobserve(en.target); } });
     }, { rootMargin: "0px 0px -8% 0px" });
-    document.querySelectorAll(".seccion__cabeza, .demo, .modulo, .detalles li, .perfil, .formulario, .parrilla-marco").forEach(function (el) {
+    document.querySelectorAll(".seccion__cabeza, .demo, .modulo, .detalles li, .salud__bloque, .seguro, .perfil, .formulario, .parrilla-marco").forEach(function (el) {
       el.classList.add("revela");
       aparecer.observe(el);
     });
