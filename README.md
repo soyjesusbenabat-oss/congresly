@@ -6,6 +6,7 @@ Web de una sola página para presentar Congresly, la plataforma de gestión de c
 
 | Fichero | Qué es |
 |---|---|
+| `textos/legal-es.json` | Aviso legal, privacidad y cookies (titular: Portal Intracom). Cada documento genera su página `.html`. |
 | `textos/es.json` | **Todos los textos** de la web, también los de las animaciones. Es lo único que hay que tocar para cambiar una frase o traducir la web. |
 | `fuente/plantilla.html` | Estructura de la página, con marcadores `{{seccion.clave}}` que apuntan a los textos. |
 | `construir.mjs` | Junta plantilla y textos y genera `index.html`, `sitemap.xml` y `robots.txt`. |
@@ -31,7 +32,7 @@ node construir.mjs
 
 - **Dominio**: `www.congresly.com` (`DOMINIO` en `construir.mjs` y fichero `CNAME`). En el registrador: registro CNAME `www` → `soyjesusbenabat-oss.github.io` y, para que `congresly.com` sin www también funcione, registros A del dominio raíz a 185.199.108.153, 185.199.109.153, 185.199.110.153 y 185.199.111.153. En GitHub: Settings → Pages → Custom domain `www.congresly.com` y «Enforce HTTPS».
 - **Formulario**: ahora abre el programa de correo con la solicitud preparada para info@intracom.es. Falta elegir un servicio de formularios.
-- **Aviso legal y privacidad**: faltan las páginas y el responsable del tratamiento.
+- **Textos legales**: hechos con los datos de Portal Intracom; pendiente de revisión por asesoría jurídica.
 
 ## Datos de ejemplo
 

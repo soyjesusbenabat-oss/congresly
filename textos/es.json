@@ -265,7 +265,7 @@
     "telefono": "Teléfono (opcional)",
     "mensaje": "¿Qué congreso organiza? (opcional)",
     "mensaje_ph": "Por ejemplo: congreso anual, unas 400 personas, con comunicaciones y créditos.",
-    "privacidad": "Acepto que se usen estos datos solo para responder a mi solicitud.",
+    "privacidad": "He leído la <a href='privacidad.html'>política de privacidad</a> y acepto que se usen estos datos solo para responder a mi solicitud.",
     "enviar": "Solicitar demo",
     "obligatorio": "Revise los campos marcados.",
     "gracias": "Se abrirá su programa de correo con la solicitud preparada. Si no se abre, escríbanos a",
@@ -275,7 +275,10 @@
   "pie": {
     "lema": "Plataforma de gestión de congresos académicos y científicos.",
     "contacto": "Contacto",
-    "derechos": "© 2026 Congresly"
+    "derechos": "© 2026 Congresly",
+    "aviso": "Aviso legal",
+    "privacidad": "Privacidad",
+    "cookies": "Cookies"
   },
   "programa": {
     "rotulo": "Programa",

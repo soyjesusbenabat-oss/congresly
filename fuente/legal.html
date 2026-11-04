@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="{{meta.lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[[TITULO]] · Congresly</title>
+<meta name="description" content="[[DESCRIPCION]]">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="[[URL]][[PAGINA]]">
+<meta name="theme-color" content="#0E1A2B">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilos.css?v=[[VERSION]]">
+</head>
+<body>
+
+<header class="cabecera con-sombra">
+  <div class="envoltura cabecera__fila">
+    <a class="marca" href="./" aria-label="{{nav.inicio}}">
+      <svg class="marca__icono" viewBox="0 0 32 32" aria-hidden="true"><use href="#logo"/></svg>
+      <span class="marca__nombre">congresly</span>
+    </a>
+    <a class="boton boton--linea legal__volver" href="./">[[VOLVER]]</a>
+  </div>
+</header>
+
+<main class="legal">
+  <article class="envoltura envoltura--estrecha">
+    <h1>[[TITULO]]</h1>
+    <p class="legal__fecha">[[ACTUALIZADO]]</p>
+    <p class="legal__intro">[[INTRO]]</p>
+[[SECCIONES]]
+    <nav class="legal__otros" aria-label="[[OTROS]]">[[OTROS_ENLACES]]</nav>
+  </article>
+</main>
+
+<footer class="pie">
+  <div class="envoltura pie__fila">
+    <a class="marca marca--clara" href="./" aria-label="{{nav.inicio}}">
+      <svg class="marca__icono" viewBox="0 0 32 32" aria-hidden="true"><use href="#logo"/></svg>
+      <span class="marca__nombre">congresly</span>
+    </a>
+    <p>{{pie.lema}}</p>
+    <p><a href="./#demo">{{pie.contacto}}</a> · <a href="aviso-legal.html">{{pie.aviso}}</a> · <a href="privacidad.html">{{pie.privacidad}}</a> · <a href="cookies.html">{{pie.cookies}}</a> · {{pie.derechos}}</p>
+  </div>
+</footer>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="logo" viewBox="0 0 32 32">
+    <rect width="32" height="32" rx="9" fill="#12B5A6"/>
+    <path d="M21.5 10.2A8 8 0 1 0 21.5 21.8" fill="none" stroke="#0E1A2B" stroke-width="3.4" stroke-linecap="round"/>
+    <circle cx="22.4" cy="16" r="2.4" fill="#F6F4EF"/>
+  </symbol>
+</svg>
+</body>
+</html>
