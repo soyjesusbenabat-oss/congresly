@@ -221,6 +221,7 @@
       .map(function (k) { return etiquetas[k] + ": " + form[k].value.trim(); })
       .join("\n");
     var destino = form.dataset.destino;
+    if (typeof gtag === "function") gtag("event", "generate_lead", { send_to: "G-75845ZEX34" });
     window.location.href = "mailto:" + destino + "?subject=" + encodeURIComponent(form.dataset.asunto + " · " + form.entidad.value.trim()) + "&body=" + encodeURIComponent(cuerpo);
     estado.className = "f-estado ok";
     estado.textContent = estado.dataset.gracias + " " + destino + ".";
